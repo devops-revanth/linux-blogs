@@ -1,5 +1,5 @@
 ---
-title: "Before You Dive into Linux: Comparing Unix, Windows & What You Must Know"
+title: "Chapter 2 : Before You Dive into Linux: Comparing Unix, Windows & What You Must Know"
 datePublished: Sun Apr 06 2025 10:44:27 GMT+0000 (Coordinated Universal Time)
 cuid: cm95imkbx000409lb8bod6p92
 slug: before-you-dive-into-linux-comparing-unix-windows-and-what-you-must-know
