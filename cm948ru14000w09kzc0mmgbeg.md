@@ -3,6 +3,7 @@ title: "Linux: What It Is, Why It Matters, and How It Took Over the World"
 datePublished: Sat Apr 05 2025 13:20:51 GMT+0000 (Coordinated Universal Time)
 cuid: cm948ru14000w09kzc0mmgbeg
 slug: linux-what-it-is-why-it-matters-and-how-it-took-over-the-world
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1744078431527/447c69d6-3374-467c-b39c-cb565f85e791.png
 
 ---
 
