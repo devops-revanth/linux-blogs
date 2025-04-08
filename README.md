@@ -37,7 +37,7 @@ This repo contains my blog posts, walkthroughs, and notes as I explore the world
 ## 📍 Follow Me
 
 - 🌐 [Hashnode Blog](https://devopsrevanth.hashnode.dev/)
-- 💼 [LinkedIn](https://www.linkedin.com/in/devopsrevanth) 
+- 💼 [LinkedIn](https://www.linkedin.com/in/revanthkumar-g) 
 
 
 ---
