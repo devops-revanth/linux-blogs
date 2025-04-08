@@ -28,7 +28,7 @@ This repo contains my blog posts, walkthroughs, and notes as I explore the world
 - Accessing your system using Console and SSH after installation.
 - Identifying user types using $ and # in the terminal.
 
-  ## 📘 Blog 4: [Chapter 4: Understanding the Linux Filesystem: Structure, Navigation, and Paths](https://devopsrevanth.hashnode.dev/understanding-the-linux-filesystem-structure-navigation-and-paths)
+## 📘 Blog 4: [Chapter 4: Understanding the Linux Filesystem: Structure, Navigation, and Paths](https://devopsrevanth.hashnode.dev/understanding-the-linux-filesystem-structure-navigation-and-paths)
 
 ### 🔹 Topics Covered:
 - What is a Filesystem?
