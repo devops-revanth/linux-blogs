@@ -1,8 +1,8 @@
 ---
-title: "Help Commands, Adding Text to Files, Redirection, I/O, tee, and Pipes in Linux"
+title: "Chapter 7 : Help Commands, Adding Text to Files, Redirection, I/O, tee, and Pipes in Linux"
 datePublished: Fri Apr 11 2025 03:19:45 GMT+0000 (Coordinated Universal Time)
 cuid: cm9c7xxqo000609ky0q6w8j7g
-slug: help-commands-adding-text-to-files-redirection-io-tee-and-pipes-in-linux
+slug: chapter-7-help-commands-adding-text-to-files-redirection-io-tee-and-pipes-in-linux
 
 ---
 
