@@ -1,8 +1,10 @@
 ---
-title: "Chapter 2 : Before You Dive into Linux: Comparing Unix, Windows & What You Must Know"
+title: "Chapter 2 : Before You Dive into Linux: Comparing Linux , Unix, Windows & What You Must Know"
 datePublished: Sun Apr 06 2025 10:44:27 GMT+0000 (Coordinated Universal Time)
 cuid: cm95imkbx000409lb8bod6p92
 slug: before-you-dive-into-linux-comparing-unix-windows-and-what-you-must-know
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1744444972518/46614fac-4d1e-43c1-b78e-759a1555f9d5.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1744444963493/f2f6239b-c78c-4a8f-b381-78e6adc0c8d5.jpeg
 
 ---
 
