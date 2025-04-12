@@ -1,9 +1,9 @@
 ---
-title: "Chapter 1 : What is Linux, Why It Matters, and How It Took Over the World"
+title: "Chapter 1 : What It Linux, Why It Matters, and How It Took Over the World"
 datePublished: Sat Apr 05 2025 13:20:51 GMT+0000 (Coordinated Universal Time)
 cuid: cm948ru14000w09kzc0mmgbeg
 slug: linux-what-it-is-why-it-matters-and-how-it-took-over-the-world
-ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1744078674736/ff9cf015-6921-43c0-9acb-867ee4a690fb.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1744444098661/12721f7e-0a29-44c6-ba35-6eb43946265d.png
 
 ---
 
