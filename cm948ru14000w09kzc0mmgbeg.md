@@ -1,8 +1,11 @@
 ---
 title: "Chapter 1 : What It Linux, Why It Matters, and How It Took Over the World"
+seoTitle: "Introduction to Linux: Impact and Global Influence"
+seoDescription: "Learn why Linux is essential, its history, unique advantages, and how it dominates modern technology from servers to smartphones and beyond"
 datePublished: Sat Apr 05 2025 13:20:51 GMT+0000 (Coordinated Universal Time)
 cuid: cm948ru14000w09kzc0mmgbeg
 slug: linux-what-it-is-why-it-matters-and-how-it-took-over-the-world
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1744444186073/e60b27a0-bbbd-4087-98db-a0da6e001e32.png
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1744444098661/12721f7e-0a29-44c6-ba35-6eb43946265d.png
 
 ---
