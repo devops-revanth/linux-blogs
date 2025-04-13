@@ -4,7 +4,7 @@ seoTitle: "Linux Commands: Help, Text Editing, I/O, Pipes"
 seoDescription: "Discover key Linux commands for help, text manipulation, I/O redirection, and workflows with tee and pipes in this guide"
 datePublished: Fri Apr 11 2025 03:19:45 GMT+0000 (Coordinated Universal Time)
 cuid: cm9c7xxqo000609ky0q6w8j7g
-slug: chapter-7-help-commands-adding-text-to-files-redirection-io-tee-and-pipes-in-linux
+slug: help-commands-adding-text-to-files-redirection-io-tee-and-pipes-in-linux
 
 ---
 
