@@ -65,7 +65,7 @@ tar -cvf project_backup.tar file1.txt file2.txt dir1/
 🟢 **Output:**
 
 ```bash
-bashCopyEditfile1.txt
+file1.txt
 file2.txt
 dir1/
 ```
@@ -204,8 +204,6 @@ Let’s now explore the ✂️ `truncate` command — simple but powerful, espec
 
 The `truncate` command is used to **shrink or extend the size of a file** to a specified size.  
 It’s like saying: "I only want this file to be *this big*, cut the rest or fill it."
-
----
 
 ### ⚙️ Syntax:
 
@@ -463,8 +461,6 @@ rm: cannot remove 'important.txt': No such file or directory
 Could not delete file
 ```
 
----
-
 ### 🔄 4. Combining `&&` and `||` Together – Build Powerful One-Liners
 
 ✅ **Example:**
@@ -485,8 +481,6 @@ mkdir dir1 && echo "Created" || echo "Failed"
 ```bash
 mkdir dir1 && { echo "Created"; } || echo "Failed"
 ```
-
----
 
 ### 🔥 5. Real World Combo Example
 
