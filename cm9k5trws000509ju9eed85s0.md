@@ -1,16 +1,18 @@
 ---
-title: "Practice for Revanth Part 1 - Linux"
+title: "Practice for Revanth Part 1"
 datePublished: Mon Mar 31 2025 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: cm9k5trws000509ju9eed85s0
 slug: practice-for-revanth
 
 ---
 
-# 🐧 Linux Basics – Filesystem & Navigation
+# 🐧 Linux Installation → 🔧 File Management
 
-## 📦 Linux Server Installation
+## 🐧 Linux Basics – Filesystem & Navigation
 
-## 🔐 Server Access
+### 📦 Linux Server Installation
+
+### 🔐 Server Access
 
 ---
 
@@ -708,4 +710,75 @@ cmp employees_main.txt employees_backup.txt && echo "Files match" || echo "Files
 
 # Combo command: Find, cut, sort and count unique errors
 cat employees.txt | grep "error" | cut -d":" -f2 | sort | uniq -c
+```
+
+## 🗜️ File Compression & Automation
+
+### 📦 `tar`, `gzip`, `gunzip`
+
+```bash
+tar -cvf archive.tar file1 file2 dir/
+tar -cvf project_backup.tar file1.txt file2.txt dir1/
+gzip file1.txt
+tar -czvf backup.tar.gz file1.txt dir/
+gunzip file1.txt.gz
+gzip -d file1.txt.gz
+tar -xzvf backup.tar.gz
+tar -czvf project_2024.tar.gz /home/user/project/
+gzip access.log
+scp access.log.gz user@server:/logs/
+tar -czvf logs.tar.gz /var/log/*.log
+scp logs.tar.gz user@remote:/backup/logs/
+tar -tzvf backup.tar.gz
+```
+
+### 📂 Combine & Split Files
+
+```bash
+cat part1.txt part2.txt part3.txt > fullfile.txt
+cat notes1.txt >> master_notes.txt
+cat notes2.txt >> master_notes.txt
+cat log-2025-04-*.log > weekly-report.log
+split -b 100M bigbackup.tar.gz backup_
+split -l 1000 bigfile.csv chunk_
+cat backup_* > bigbackup.tar.gz
+zip --split-size 100m -r project.zip project/
+```
+
+### ⚙️ Command Chaining – `;`, `&&`, `||`
+
+```bash
+echo "Cleaning..." ; rm -rf temp/ ; echo "Done!"
+mkdir project && cd project && touch readme.md
+mkdir project && cd notfound && echo "Ready"
+rm important.txt || echo "Could not delete file"
+mkdir dir1 && echo "Created" || echo "Failed"
+mkdir dir1 && { echo "Created"; } || echo "Failed"
+tar -czf backup.tar.gz /mydata && mv backup.tar.gz /backup || echo "Backup failed!"
+ls ; wrongcmd ; echo "End"
+ls && wrongcmd && echo "Final step"
+mkdir logs && { cd logs && touch log.txt; } || echo "Something went wrong"
+```
+
+### ✍️ `vi` and `vim`
+
+```bash
+vi filename
+vim anotherfile.txt
+```
+
+### 🧹 `sed` – Stream Editor
+
+```bash
+sed 's/old_pattern/new_pattern/' file
+sed 's/apple/orange/' fruits.txt
+sed 's/apple/orange/g' fruits.txt
+sed 's/apple/orange/i' fruits.txt
+sed '/banana/d' fruits.txt
+sed '/apple/i This is a fruit' fruits.txt
+sed '/banana/a Fruit end' fruits.txt
+sed -n '/apple/p' fruits.txt
+sed '/^#/d' access.log > clean_log.txt
+sed 's/\([0-9]\{1,3\}\.\){3}[0-9]\{1,3\}/xxx.xxx.xxx.xxx/g' clean_log.txt > anonymized_log.txt
+sed -n '/ 404 /p' anonymized_log.txt > error_404_log.txt
 ```
