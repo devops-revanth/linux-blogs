@@ -782,3 +782,201 @@ sed '/^#/d' access.log > clean_log.txt
 sed 's/\([0-9]\{1,3\}\.\){3}[0-9]\{1,3\}/xxx.xxx.xxx.xxx/g' clean_log.txt > anonymized_log.txt
 sed -n '/ 404 /p' anonymized_log.txt > error_404_log.txt
 ```
+
+## 🧑‍💻 User & Group Creation
+
+```bash
+sudo groupadd devops
+sudo groupadd interns
+sudo useradd -m revanth
+sudo useradd -g devops -m -s /bin/bash revanth
+sudo useradd -m -c "DevOps Intern" -s /bin/bash -G devops abhi
+sudo useradd -m -s /bin/bash -c "DevOps Intern" -G devops -e 2025-06-01 intern1
+sudo useradd -g interns -m -s /bin/bash bablu
+sudo useradd -g devops -G docker,sudo -s /bin/bash -c "DevOps Engineer" -m -d /home/teja -e 2025-12-31 -f 7 teja
+sudo useradd -g groupname -G secondarygroup1,secondarygroup2 -s /bin/bash -c "User Description" -m -d /home/username -e 2025-12-31 -f 10 username
+sudo useradd devplayer
+```
+
+## 🔐 Set Passwords
+
+```bash
+sudo passwd revanth
+sudo passwd intern1
+sudo passwd teja
+sudo passwd abhi
+```
+
+## 👨‍👨‍👦 Group Modification
+
+```bash
+sudo groupmod -n devops_team devops
+sudo groupmod -n newdevops devops
+```
+
+## 🧼 Group Deletion
+
+```bash
+sudo groupdel devops
+sudo groupdel devops_team
+```
+
+## 🔄 Modify Users
+
+```bash
+sudo usermod -aG docker revanth
+sudo usermod -aG docker,nginx revanth
+sudo usermod -aG devops bablu
+sudo usermod -aG sudo username
+sudo usermod -aG sudo viratkohli
+sudo usermod -aG wheel viratkohli
+sudo usermod -d /home/devopsuser -m revanth
+sudo usermod -l newrevanth revanth
+sudo usermod -s /bin/zsh revanth
+```
+
+## ❌ Delete Users
+
+```bash
+sudo userdel revanth
+sudo userdel -r revanth
+sudo userdel -r intern1
+sudo userdel -r bablu
+```
+
+## 🔁 Bulk User Creation with Script
+
+```bash
+#!/bin/bash
+for name in teja ravi krishna
+do
+  sudo useradd -m -s /bin/bash -G docker,sudo $name
+  echo "$name:Welcome@123" | sudo chpasswd
+done
+```
+
+---
+
+## 📋 Check Users & Groups
+
+```bash
+id teja
+groups username
+groups revanth
+getent passwd revanth
+grep revanth /etc/group
+sudo cat /etc/shadow | grep revanth
+```
+
+---
+
+## 🔐 Password Aging (chage)
+
+```bash
+sudo chage -l teja
+sudo chage -l username
+sudo chage -l viratkohli
+sudo chage -l john
+sudo chage -M 45 viratkohli
+sudo chage -m 7 viratkohli
+sudo chage -W 5 viratkohli
+sudo chage -d 0 viratkohli
+sudo chage -E 2025-05-31 john
+sudo usermod --expiredate 1 john
+```
+
+---
+
+## 🧑‍✈️ Switch Users & Sudo
+
+```bash
+su
+su -
+su - john
+sudo command
+sudo -i
+sudo su -
+```
+
+## ⚙️ Sudo & visudo
+
+```bash
+sudo visudo
+rishabpant ALL=(ALL) NOPASSWD: /bin/systemctl restart apache2
+# %wheel ALL=(ALL) ALL
+%devops ALL=(ALL) ALL
+```
+
+---
+
+> 💡 `%` indicates it's a group, not a user.
+
+| Field | Meaning |
+| --- | --- |
+| `rishabpant` | The user being given permission |
+| `ALL` | From any host (default) |
+| `(ALL)` | As any user (typically root) |
+| `NOPASSWD:` | No password prompt needed for this command |
+| `/bin/systemctl restart apache2` | Specific command they’re allowed to run |
+
+## 🔎 Monitor & Logs
+
+```bash
+cat /var/log/auth.log | grep sudo
+sudo grep 'sudo' /var/log/auth.log
+journalctl | grep sudo
+```
+
+---
+
+## 🔐 Lock/Unlock Accounts
+
+```bash
+sudo usermod -L username
+sudo usermod -L john
+sudo usermod -U username
+sudo usermod -U john
+sudo grep john /etc/shadow
+```
+
+---
+
+## 🛠️ Misc
+
+```bash
+sudo vi /etc/ssh/sshd_config
+sudo yum update -y
+sudo apt update
+sudo systemctl restart apache2
+```
+
+---
+
+## 📁 Important Files
+
+* `/etc/passwd`
+    
+* `/etc/shadow`
+    
+* `/etc/group`
+    
+* `/etc/gshadow`
+    
+* `/etc/login.defs`
+    
+* `/var/log/auth.log` (Ubuntu/Debian)
+    
+* `/var/log/secure` (RHEL/CentOS)
+    
+* `/etc/sudoers`
+    
+* `/etc/pam.d/sshd`
+    
+* `/etc/pam.d/sudo`
+    
+* `/etc/pam.d/common-auth`
+    
+* `/etc/pam.d/system-auth`
+    
+
+---
