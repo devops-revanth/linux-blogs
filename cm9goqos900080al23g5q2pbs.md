@@ -991,7 +991,7 @@ sed -n '/ 404 /p' anonymized_log.txt > error_404_log.txt
 #### **Input (**`access.log`):
 
 ```bash
-swiftCopyEdit# This is a comment
+# This is a comment
 192.168.1.1 - - [10/Apr/2025:06:10:00 +0000] "GET /index.html" 200 1024
 192.168.1.2 - - [10/Apr/2025:06:11:00 +0000] "GET /about.html" 404 512
 ```
