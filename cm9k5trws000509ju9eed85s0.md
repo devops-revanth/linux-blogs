@@ -1,5 +1,5 @@
 ---
-title: "Practice for Revanth"
+title: "Practice for Revanth Part 1 - Linux"
 datePublished: Mon Mar 31 2025 18:30:00 GMT+0000 (Coordinated Universal Time)
 cuid: cm9k5trws000509ju9eed85s0
 slug: practice-for-revanth
@@ -29,7 +29,7 @@ pwd            # Print working directory
 cd Documents   # Navigate into Documents folder  
 cd ..          # Go one level up  
 cd ~           # Go to home directory  
-ls             # List files and directories  
+ls             # List files and directories
 ```
 
 ---
@@ -138,7 +138,7 @@ touch file1.txt         # Create an empty file
 cp file1.txt file2.txt  # Copy file  
 vi file3.txt            # Create/edit file using vi editor  
 mkdir myfolder          # Create a directory  
-cp -R myfolder newfolder  # Recursively copy a directory  
+cp -R myfolder newfolder  # Recursively copy a directory
 ```
 
 ---
@@ -245,7 +245,7 @@ ls -l raju                 # Check permissions for a specific file/folder
 Permissions are displayed as:
 
 ```bash
--rw-r--r--  
+-rw-r--r--
 ```
 
 This means:
@@ -362,4 +362,165 @@ chmod -R 755 /dir # To change permissions for all files in a directory
     
     ```bash
     getfacl test
+    ```
+    
+
+### I/O Redirection, `tee`, and Pipes in Linux
+
+#### Basic Redirection
+
+* **Standard Output (stdout)** redirection:
+    
+    ```bash
+    echo "Hello" > linux  # Redirects stdout to a file, overwrites the file if it exists.
+    echo "How are you" >> linux  # Appends stdout to the file.
+    ```
+    
+* **Using** `cat` to create and write to a file:
+    
+    ```bash
+    cat > linux  # Will create and write to the file "linux".
+    ```
+    
+* **Editing the file with** `vi`:
+    
+    ```bash
+    vi linux  # Open the file for editing in vi.
+    ```
+    
+
+#### Input/Output Redirection
+
+* **Redirect stdout to a file:**
+    
+    ```bash
+    echo "Hello" > linux  # > → Redirect stdout (Overwrites file)
+    ```
+    
+* **Append stdout to a file:**
+    
+    ```bash
+    echo "How are you" >> linux  # >> → Append to file (stdout)
+    ```
+    
+* **Redirect stderr (errors only) to a file:**
+    
+    ```bash
+    ls wrong_file 2> error.txt  # 2> → Redirect stderr to a file
+    ```
+    
+* **Append stderr to a file:**
+    
+    ```bash
+    ls wrong_folder 2>> error.txt  # 2>> → Append stderr to a file
+    ```
+    
+* **Redirect both stdout and stderr to the same file:**
+    
+    ```bash
+    ls /etc /wrong_folder &> all_output.txt  # &> → Redirect both stdout & stderr (Bash only)
+    ```
+    
+* **Separate stdout and stderr into different files:**
+    
+    ```bash
+    ls /etc /wrong_folder > output.txt 2> error.txt  # Separate stdout and stderr
+    cat output.txt error.txt  # Display the contents of both files
+    ```
+    
+* **Redirect stderr to the same location as stdout:**
+    
+    ```bash
+    ls /etc /wrong_folder 1> combined.txt 2>&1  # 2>&1 → Send stderr to same place as stdout
+    ```
+    
+* **Incorrect redirection:**
+    
+    ```bash
+    ls /etc /wrong_folder 2>&1 > wrong.txt  # Wrong Version of Redirection
+    ```
+    
+
+#### Using `/dev/null`
+
+* **Suppressing output and only logging errors:**
+    
+    ```bash
+    rsync -av /source /backup > /dev/null 2>&1  # Redirect both stdout & stderr to /dev/null
+    find / -name "*.conf" > /dev/null 2> error.log  # Logging only errors, ignoring successful output
+    ls /etc/ /wrong_folder > files.txt 2> /dev/null  # Capturing only output, ignoring errors
+    ```
+    
+* **Checking file existence without showing output:**
+    
+    ```bash
+    test -f somefile.txt > /dev/null 2>&1 && echo "Exists" || echo "No file"
+    [ -f somefile.txt ] && echo "Found" || echo "Not found"
+    ```
+    
+
+#### Using `tee`
+
+* **Viewing and saving output simultaneously:**
+    
+    ```bash
+    echo "Hello" | tee log.txt  # View & Save Output Simultaneously
+    ```
+    
+* **Appending to a file instead of overwriting:**
+    
+    ```bash
+    echo "Line2" | tee -a log.txt  # Append to a file
+    ```
+    
+* **Using** `tee` with other commands in a pipeline:
+    
+    ```bash
+    df -h | tee disk.txt | grep /dev  # Combine with Other Commands (Pipeline Magic)
+    ```
+    
+* **Using** `tee` with `sudo` to edit root-owned files:
+    
+    ```bash
+    echo "new config" | sudo tee -a /etc/config.conf  # Edit root-owned files
+    ```
+    
+* **Logging script output while monitoring:**
+    
+    ```bash
+    ./backup.sh | tee backup_log.txt  # Log script output while monitoring
+    ```
+    
+
+#### Using Pipes
+
+* **Filter processes with** `grep` via pipes:
+    
+    ```bash
+    ps aux | grep ssh  # List processes and filter with grep
+    ```
+    
+* **Count the number of lines in a file:**
+    
+    ```bash
+    cat file.txt | wc -l  # Count lines in file using cat and pipe
+    wc -l < file.txt  # An alternative to count lines in file
+    ```
+    
+* **Monitor a log file for errors using** `tail` and `grep`:
+    
+    ```bash
+    tail -f /var/log/syslog | grep "error"  # Follow syslog and filter errors
+    ```
+    
+* **Process a file with** `cut`, `sort`, and `uniq`:
+    
+    ```bash
+    cat /etc/passwd | cut -d: -f1 | sort | uniq  # Extract and process file content
+    ```
+    
+* **Display disk space and filter specific information:**
+    
+    ```bash
+    df -h | tee disk_log.txt | grep /dev  # View and save disk space information
     ```
