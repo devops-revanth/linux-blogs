@@ -524,3 +524,188 @@ chmod -R 755 /dir # To change permissions for all files in a directory
     ```bash
     df -h | tee disk_log.txt | grep /dev  # View and save disk space information
     ```
+    
+
+## 🛠️ File Maintenance & Display Commands in Linux
+
+### 📁 File Maintenance Commands
+
+* **Create Files & Directories**
+    
+    ```bash
+    touch file1.txt                    # Create an empty file
+    vi file2.txt                       # Open file in vi editor
+    mkdir test                         # Create a directory
+    mkdir -p /tmp/parent/child         # Create nested directories
+    mkdir -p projectname/{docs,src,tests}  # Create a project structure with multiple folders
+    ```
+    
+* **Delete Files & Directories**
+    
+    ```bash
+    rm file1.txt                       # Remove a file
+    rm -f file2.txt                    # Force remove without prompt
+    rm -rf /tmp/parent                 # Remove directory recursively
+    rmdir emptydir                     # Remove empty directory
+    ```
+    
+* **Copy & Move Files**
+    
+    ```bash
+    cp file1.txt file2.txt             # Copy file
+    cp -i file2.txt file3.txt          # Interactive copy (prompt before overwrite)
+    cp -p file1.txt file4.txt          # Preserve file attributes
+    cp -r docs/ backup_docs/           # Recursively copy directory
+    mv file4.txt archive.txt           # Rename or move file
+    mv archive.txt /tmp/               # Move file to another directory
+    mv projectname/ /home/user/        # Move directory to a new location
+    cp -r template_project/ new_project/  # Copy entire project
+    mv *.txt docs/                     # Move all .txt files to docs
+    rm -f *.log                        # Remove all log files
+    mkdir -p myproject/{src,tests,docs,build}  # Full project structure
+    cp -p *.conf backup_configs/       # Backup all config files
+    rm -rf temp_build/                 # Clean temp builds
+    ```
+    
+
+---
+
+### 📄 File Display Commands
+
+* **Basic Display**
+    
+    ```bash
+    cat filename                       # Display entire file
+    cat hello.txt
+    cat file1.txt file2.txt > combined.txt  # Combine files into one
+    ```
+    
+* **Paging Through Files**
+    
+    ```bash
+    less filename                      # Scroll with PageUp/PageDown
+    less /var/log/syslog
+    more filename                      # Basic pager
+    more /etc/services
+    ```
+    
+* **Show Specific Parts**
+    
+    ```bash
+    head filename                      # First 10 lines
+    head -n 20 filename                # First 20 lines
+    tail filename                      # Last 10 lines
+    tail -n 20 filename                # Last 20 lines
+    tail -f /var/log/syslog            # Follow file updates in real time
+    tail -f /var/log/syslog | grep -i error  # Watch for live errors
+    ```
+    
+* **Power Usage**
+    
+    ```bash
+    head -n 1 config.yaml              # Show first line only
+    cat log.txt | grep "2025-04-12" | head -n 10
+    ./backup.sh | tee backup.log | tail -n 10  # Monitor and log script output
+    diff old_config.conf new_config.conf | less
+    cat report.csv | column -t -s "," | less   # Format CSV neatly
+    ```
+    
+
+---
+
+## 📑 Text Processing in Linux
+
+### ✂️ `cut` – Extract Specific Columns
+
+```bash
+cut -d ":" -f2 employees.txt               # Extract Names (2nd field)
+cut -d ":" -f2,3 employees.txt             # Name & Department
+cut -d ":" --complement -f5 employees.txt  # All fields except Salary
+cut -c 1-5 employees.txt                   # First 5 characters of each line
+cut -d ' ' -f1 /var/log/nginx/access.log   # IP addresses from logs
+cut -d ":" -f2,5 employees.txt             # Name and Salary
+```
+
+---
+
+### 🧠 `awk` – Advanced Text Processing
+
+```bash
+awk -F ':' '{ print $2 }' employees.txt                         # Just Names
+awk -F ':' '{ print $2, $5 }' employees.txt                     # Name and Salary
+awk -F ':' '$4 == "Developer" { print $2, $4 }' employees.txt   # Only Developers
+awk -F ':' '$5 > 70000 { print $2, $5 }' employees.txt          # Salaries > 70000
+awk -F ':' 'BEGIN { print "Name\tDept\tSalary" } 
+{ print $2 "\t" $3 "\t" $5 }' employees.txt                     # Nicely formatted
+awk -F ':' '{ sum += $5 } END { print "Total Salary: " sum }' employees.txt
+awk -F ':' '$3 == "Engineering" && $5 > 70000 { print $2 }' employees.txt
+echo "101:Ravi:Engineering:Developer:75000" | awk -F ':' '{ print $2 }'
+```
+
+---
+
+### 🔍 `grep` & `egrep` – Search Text Patterns
+
+```bash
+grep -i "developer" employee_data.txt
+grep -n "devops" employee_data.txt
+grep -c "Manager" employee_data.txt
+grep -v "Admin" employee_data.txt
+grep "Dev.*" employee_data.txt
+grep -r "password" /etc/
+ps aux | grep ssh
+grep --color=auto "admin" employee_data.txt
+
+egrep -i 'manager' employees.txt
+egrep 'HR|Finance' employees.txt
+egrep ':.*er:' employees.txt
+egrep '^10[58]:' employees.txt
+egrep ':[6][0-9]{4}$' employees.txt
+egrep 'Executive|Manager' employees.txt > leadership.txt
+```
+
+---
+
+### 🔃 `sort`, `uniq` – Sorting & Uniqueness
+
+```bash
+sort -t ':' -k2 employees.txt              # Sort by Name
+sort -t ':' -k5 -n employees.txt           # Sort by Salary
+sort -t ':' -k3,3 -k4,4 employees.txt      # Dept + Role
+sort -t ':' -k5 -n -r employees.txt        # Descending Salary
+sort -u employees.txt                      # Unique lines
+
+# Salary Insights
+sort -t ':' -k5 -n employees.txt | head -1         # Least paid
+sort -t ':' -k5 -n -r employees.txt | head -1      # Highest paid
+
+# Frequency Analysis
+cut -d ':' -f3 employees.txt | sort | uniq
+cut -d ':' -f3 employees.txt | sort | uniq -c
+cut -d ':' -f5 employees.txt | sort | uniq -d
+cut -d ':' -f5 employees.txt | sort | uniq -u
+cut -d ':' -f5 employees.txt | sort | uniq -c | sort -nr
+```
+
+---
+
+### 📊 `wc`, `diff`, `cmp` – Count & Compare
+
+```bash
+wc employees.txt             # Lines, Words, Characters
+wc -l employees.txt          # Just line count
+wc -w employees.txt          # Word count
+wc -m employees.txt          # Character count
+wc -L employees.txt          # Length of longest line
+
+diff employees_v1.txt employees_v2.txt
+diff -u employees_v1.txt employees_v2.txt
+diff -y employees_v1.txt employees_v2.txt
+
+cmp employees_v1.txt employees_v2.txt
+cmp -l employees_v1.txt employees_v2.txt
+cmp employees_main.txt employees_backup.txt && echo "Files match" || echo "Files differ"
+
+# Combo command: Find, cut, sort and count unique errors
+cat employees.txt | grep "error" | cut -d":" -f2 | sort | uniq -c
+```
