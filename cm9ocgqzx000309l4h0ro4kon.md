@@ -5,6 +5,8 @@ seoDescription: "Explore Linux networking essentials: components, configurations
 datePublished: Sat Apr 19 2025 14:59:36 GMT+0000 (Coordinated Universal Time)
 cuid: cm9ocgqzx000309l4h0ro4kon
 slug: understanding-linux-networking-components-interfaces-and-tools
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1745075561238/c3347b0c-1bb9-484b-ba28-385b68794712.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1745075572282/80ebad4f-f9ea-4863-9ff0-05cbdbaf061e.jpeg
 
 ---
 
