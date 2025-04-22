@@ -1,9 +1,12 @@
 ---
 title: "Chapter 18 : Linux OS Hardening – Practical Steps to Secure and Fortify Your System"
+seoTitle: "Linux OS Hardening: Secure Your System"
 seoDescription: "Learn practical steps to harden and secure your Linux operating system, ensuring robust protection against vulnerabilities and attacks"
 datePublished: Mon Apr 21 2025 18:41:14 GMT+0000 (Coordinated Universal Time)
 cuid: cm9rf9he9001x09l4by9df6cb
 slug: linux-os-hardening-practical-steps-to-secure-and-fortify-your-system
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1745323692037/ccf6b962-91cb-4618-903b-46127cd9566c.jpeg
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1745323703372/704f8dad-5248-423f-910d-3e19e00f5e2f.jpeg
 
 ---
 
