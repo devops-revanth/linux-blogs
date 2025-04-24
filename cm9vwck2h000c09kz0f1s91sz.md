@@ -23,17 +23,15 @@ But as we manage more complex Linux systems, the needs evolve—flexibility, sca
 
 ✅ **LVM (Logical Volume Manager)** – why it’s a game changer and how to configure it during OS installation  
 ✅ **Creating & Extending LVM Partitions** – for dynamic, flexible disk allocation  
-✅ **Swap Space Management** – how to add or extend it using LVM  
+✅ **Swap Space Management** – how to add or extend it using LVM
 
 > ⚠️ **Note:** Once I complete all blogs in this Linux series, I’ll go back, enhance each post for clarity, interactivity, and real-world depth. A few blogs were wrapped up quickly due to time constraints — but stay tuned, I’ll be revisiting and improving them with a proper plan!
 
-Ready to level up your Linux storage game? Let’s go topic by topic, interactively and practically, just like we always do.  
+Ready to level up your Linux storage game? Let’s go topic by topic, interactively and practically, just like we always do.
 
 ## 🧱 LVM (Logical Volume Management)
 
 Let’s follow our **Why? What? How?** format to explore **LVM** — the dynamic way to manage storage in Linux systems.
-
----
 
 ### 🧐 Why LVM?
 
@@ -53,8 +51,6 @@ This is where **LVM** saves the day.
 #### 🔥 Real-Time Use Case:
 
 > You’re running a database under `/oracle`, and space starts running out. Rather than stopping services and backing up data to re-partition the disk — you simply plug in a new virtual disk and extend `/oracle` via LVM. No downtime, no panic.
-
----
 
 ### 💡 What is LVM?
 
@@ -78,13 +74,9 @@ Think of it like **Lego blocks for storage**:
 3. **Logical Volume (LV)** – Allocated space from VG (e.g., `lv_oracle`) that gets mounted to directories like `/oracle`
     
 
----
-
 ### 🔧 How to Use LVM?
 
 Let’s break it down into multiple steps — starting with **LVM setup during OS installation**, and then we’ll move on to **adding disks and managing LVM partitions dynamically**.
-
----
 
 ## 🛠️ LVM Configuration During Installation
 
@@ -105,8 +97,6 @@ When you’re installing a modern Linux OS (RHEL/CentOS 7+), the installer allow
 
 > 🧠 Pro Tip: Choose **xfs** for modern systems, especially for large filesystems and better performance.
 
----
-
 ### 🎯 Real-World Scenario:
 
 Let’s say you have a 100GB disk:
@@ -126,13 +116,9 @@ Let’s say you have a 100GB disk:
 
 ✅ Done. All partitions can now be resized later with zero downtime.
 
----
-
 ## ➕ Add Disk and Create LVM Partition
 
 We're now entering a **real-world, post-installation** scenario where your system is already running, and you need more space.
-
----
 
 ### 🧐 Why Add a Disk and Create an LVM Partition?
 
@@ -146,8 +132,6 @@ You have a few options:
     
 * 🛠 **Extend** the existing `/oracle` with **LVM** — **the cleanest and most flexible method**.
     
-
----
 
 ### 💡 What Happens When You Add a Disk?
 
@@ -166,13 +150,9 @@ When you plug in a new disk (physical or virtual), Linux doesn’t magically sta
 6. **Resize the filesystem**
     
 
----
-
 ### 🔧 How to Add a Disk and Create an LVM Partition
 
 Let’s walk through the process step-by-step, interactively:
-
----
 
 ### 🧪 Step 1: Scan and Detect New Disk
 
@@ -193,8 +173,6 @@ Then check for the new disk (e.g., `/dev/sdb`):
 ```bash
 fdisk -l
 ```
-
----
 
 ### 🛠 Step 2: Create a New Partition
 
@@ -229,8 +207,6 @@ lsblk
 
 You should now see `/dev/sdb1`.
 
----
-
 ### 📦 Step 3: Initialize as Physical Volume (PV)
 
 ```bash
@@ -242,8 +218,6 @@ Check with:
 ```bash
 pvdisplay
 ```
-
----
 
 ### 📚 Step 4: Extend the Volume Group
 
@@ -259,8 +233,6 @@ Check:
 vgdisplay
 ```
 
----
-
 ### 🧱 Step 5: Extend the Logical Volume
 
 Assume your LV is `/dev/vg_oracle/lv_oracle`:
@@ -274,8 +246,6 @@ or to use all free space:
 ```bash
 lvextend -l +100%FREE /dev/vg_oracle/lv_oracle
 ```
-
----
 
 ### 🧼 Step 6: Resize the Filesystem
 
@@ -293,8 +263,6 @@ resize2fs /dev/vg_oracle/lv_oracle
 
 ✅ That’s it! `/oracle` has been extended with the new disk — no reboot, no downtime.
 
----
-
 ### 🔥 Real-World Example
 
 > In a production system, Linux admin had an Oracle DB running under `/oracle` with only 1GB space. Instead of deleting files, he added a new 10GB disk and extended `/oracle` using LVM. The entire process took less than 5 minutes without any service interruption.
@@ -302,8 +270,6 @@ resize2fs /dev/vg_oracle/lv_oracle
 ## 📏 Extend Disk Using LVM
 
 Running out of disk space is a **very common** situation in production environments. With LVM, **scaling storage becomes seamless** — no need to stop services, unmount drives, or reboot machines.
-
----
 
 ### 🧐 Why Extend an LVM Logical Volume?
 
@@ -320,8 +286,6 @@ Without LVM, you’d either:
 
 **But with LVM**, you can simply attach more storage and **expand live** — all while the system is running.
 
----
-
 ### 💡 What Do You Need?
 
 * A **new disk** or available **free space** in your Volume Group
@@ -330,8 +294,6 @@ Without LVM, you’d either:
     
 * Knowledge of your **filesystem type** (XFS, ext4, etc.)
     
-
----
 
 ### 🧪 Real-Time Use Case
 
@@ -344,8 +306,6 @@ Without LVM, you’d either:
 
 Here’s how to do it:
 
----
-
 ### 🔧 How to Extend an LVM Volume
 
 #### 🔹 Step 1: Scan for New Disk
@@ -356,8 +316,6 @@ lsblk
 ```
 
 Suppose new disk is `/dev/sdc`.
-
----
 
 #### 🔹 Step 2: Partition the Disk for LVM
 
@@ -374,15 +332,11 @@ Inside `fdisk`:
 * `w` → write
     
 
----
-
 #### 🔹 Step 3: Create a Physical Volume (PV)
 
 ```bash
 pvcreate /dev/sdc1
 ```
-
----
 
 #### 🔹 Step 4: Add PV to Volume Group
 
@@ -399,8 +353,6 @@ Then:
 ```bash
 vgextend vg_var /dev/sdc1
 ```
-
----
 
 #### 🔹 Step 5: Extend the Logical Volume
 
@@ -422,8 +374,6 @@ Or use all available space:
 lvextend -l +100%FREE /dev/vg_var/lv_var
 ```
 
----
-
 #### 🔹 Step 6: Resize the Filesystem
 
 For XFS:
@@ -438,19 +388,13 @@ For ext4:
 resize2fs /dev/vg_var/lv_var
 ```
 
----
-
 ✅ Done! Your `/var` is now extended **live** with zero downtime.
-
----
 
 ### 🧠 Real-World Example
 
 In a data center with daily security logs growing rapidly, the `/var/log` filled up. Instead of moving logs or restarting rsyslog, the admin added a new 20GB disk and extended `/var` — all during business hours with no interruption to services.
 
 ## 🔽 Reducing a Logical Volume in LVM
-
----
 
 ### 🧐 Why Reduce a Logical Volume?
 
@@ -465,15 +409,11 @@ Reducing an LV:
 * Enables better disk management in storage-constrained environments
     
 
----
-
 ### 💡 What Is LV Reduce?
 
 It’s the **shrinking** of a Logical Volume (LV) to a smaller size.
 
 ⚠️ **Important**: Reducing an LV is risky if done improperly, especially with file systems. Always back up data before reducing!
-
----
 
 ### 🔧 How to Reduce a Logical Volume
 
@@ -485,15 +425,11 @@ Let’s walk through reducing `/home` from 10 GB to 5 GB.
 tar -czvf /root/home_backup.tar.gz /home
 ```
 
----
-
 #### 🔹 Step 2: Unmount the Filesystem
 
 ```bash
 umount /home
 ```
-
----
 
 #### 🔹 Step 3: Run Filesystem Check
 
@@ -503,23 +439,17 @@ For ext4:
 e2fsck -f /dev/mapper/vg_name-lv_home
 ```
 
----
-
 #### 🔹 Step 4: Resize Filesystem First
 
 ```bash
 resize2fs /dev/mapper/vg_name-lv_home 5G
 ```
 
----
-
 #### 🔹 Step 5: Reduce the LV
 
 ```bash
 lvreduce -L 5G /dev/mapper/vg_name-lv_home
 ```
-
----
 
 #### 🔹 Step 6: Remount and Verify
 
@@ -528,17 +458,11 @@ mount /home
 df -h /home
 ```
 
----
-
 ### ✅ Real-World Use Case
 
 A student Linux lab server had `/home` allocated 50 GB but barely used 3 GB. Admin reduced it to 5 GB and moved 45 GB to `/opt`, where large datasets for ML training were needed.
 
----
-
 ## 📸 LVM Snapshots
-
----
 
 ### 🧐 Why Use LVM Snapshots?
 
@@ -551,13 +475,9 @@ Snapshots are ideal for:
 * **Testing upgrades** without impacting the live environment
     
 
----
-
 ### 💡 What Is an LVM Snapshot?
 
 A snapshot is a **point-in-time copy** of a Logical Volume. It can be used to roll back changes if something goes wrong.
-
----
 
 ### 🔧 How to Create and Use LVM Snapshots
 
@@ -567,8 +487,6 @@ A snapshot is a **point-in-time copy** of a Logical Volume. It can be used to ro
 vgs
 ```
 
----
-
 #### 🔹 Step 2: Create a Snapshot
 
 ```bash
@@ -576,8 +494,6 @@ lvcreate -L 1G -s -n snap_home /dev/vg_name/lv_home
 ```
 
 This creates a 1GB snapshot named `snap_home`.
-
----
 
 #### 🔹 Step 3: Mount the Snapshot (Optional)
 
@@ -587,8 +503,6 @@ mount /dev/vg_name/snap_home /mnt/snap
 ```
 
 You can now access the old state of `/home`.
-
----
 
 #### 🔹 Step 4: Rollback from Snapshot (If Needed)
 
@@ -600,17 +514,11 @@ lvconvert --merge /dev/vg_name/snap_home
 
 Reboot is usually required after merging.
 
----
-
 ### ✅ Real-World Use Case
 
 Before running a kernel upgrade on a production box, an LVM snapshot of `/boot` and `/` was taken. The update failed due to a driver issue. Admin rolled back using the snapshot in under 5 minutes — no restore tapes, no panic.
 
----
-
 ## 🌀 Swap Space Management using LVM
-
----
 
 ### 🧐 Why Manage Swap Space?
 
@@ -625,8 +533,6 @@ Swap space acts like **virtual RAM** — when your physical memory is full, Linu
 
 And with LVM, you can **easily add or extend swap** space dynamically — no need to repartition the disk!
 
----
-
 ### 💡 What Is Swap in LVM?
 
 Swap in LVM is just another **logical volume formatted for swap** and activated. Unlike traditional fixed swap partitions, LVM lets you:
@@ -638,13 +544,9 @@ Swap in LVM is just another **logical volume formatted for swap** and activated.
 * Move swap volumes across physical disks
     
 
----
-
 ### 🔧 How to Create Swap Space Using LVM
 
 Let’s say we want to create a **2 GB** swap volume.
-
----
 
 #### 🔹 Step 1: Create a Logical Volume for Swap
 
@@ -652,23 +554,17 @@ Let’s say we want to create a **2 GB** swap volume.
 lvcreate -L 2G -n lv_swap vg_name
 ```
 
----
-
 #### 🔹 Step 2: Format It as Swap
 
 ```bash
 mkswap /dev/vg_name/lv_swap
 ```
 
----
-
 #### 🔹 Step 3: Enable the Swap Space
 
 ```bash
 swapon /dev/vg_name/lv_swap
 ```
-
----
 
 #### 🔹 Step 4: Make It Persistent After Reboot
 
@@ -678,8 +574,6 @@ Add this to `/etc/fstab`:
 /dev/vg_name/lv_swap  swap  swap  defaults  0  0
 ```
 
----
-
 #### 🔹 Step 5: Verify Swap Is Active
 
 ```bash
@@ -687,13 +581,9 @@ swapon --show
 free -m
 ```
 
----
-
 ### 🔄 How to Extend Swap Space (Example)
 
 Suppose your application starts consuming more memory, and you want to **increase swap from 2 GB to 4 GB**.
-
----
 
 #### Step 1: Disable Swap Temporarily
 
@@ -701,15 +591,11 @@ Suppose your application starts consuming more memory, and you want to **increas
 swapoff /dev/vg_name/lv_swap
 ```
 
----
-
 #### Step 2: Resize the Volume
 
 ```bash
 lvresize -L 4G /dev/vg_name/lv_swap
 ```
-
----
 
 #### Step 3: Reformat and Reactivate Swap
 
@@ -718,13 +604,9 @@ mkswap /dev/vg_name/lv_swap
 swapon /dev/vg_name/lv_swap
 ```
 
----
-
 ### ✅ Real-World Use Case
 
 A virtual machine used for big data processing (e.g., Hadoop) began using all RAM and crashing. Admin extended swap space dynamically using LVM — no downtime, no data loss. The job completed without a hitch.
-
----
 
 ## ✅ **Conclusion**
 
