@@ -5,6 +5,8 @@ seoDescription: "Master LVM in Linux: configure, extend, and manage logical volu
 datePublished: Thu Apr 24 2025 21:50:36 GMT+0000 (Coordinated Universal Time)
 cuid: cm9vwck2h000c09kz0f1s91sz
 slug: mastering-lvm-and-advanced-storage-management-in-linux-from-basics-to-real-world-scalability
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1745546816010/87d23e76-5dee-46f8-8730-43d8f835897d.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1745546842368/3c792bdd-cc39-4ad5-b882-4c80f21aa423.png
 
 ---
 
