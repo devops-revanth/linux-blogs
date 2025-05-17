@@ -24,7 +24,7 @@ Before we dive into the models themselves, let’s first understand the **core p
 
 As we mentioned in the introduction, we will explore the core phases of the SDLC through a fun and relatable example — building **ShopSmart**, your very own online shopping platform. Here’s how each phase unfolds on your journey to creating **ShopSmart**:
 
-![Systems Development Life Cycle: 7 Phases And 6 Basic Methods - Techvify](https://techvify-software.com/wp-content/uploads/2023/11/what-is-systems-development-life-cycle.jpg align="left")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747508725800/2ca92e88-0cd8-4c8a-9a4f-3e172b631e61.png align="center")
 
 ### 1\. 📋 Requirements Analysis
 
@@ -181,7 +181,7 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
 
 > “Let’s plan *everything* first and then build it phase by phase. Simple and structured!”
 
-![Software Development Life Cycle: A Comprehensive Guide](https://www.crossasyst.com/wp-content/uploads/2024/01/3-4.png align="left")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747509446170/224215c7-d75b-4e22-8743-f65746300ddb.png align="center")
 
 ### 🚧 How ShopSmart Was Built Using Waterfall:
 
@@ -390,54 +390,6 @@ The dev team wanted **speed**, and the ops team wanted **stability**. That’s w
 So began ShopSmart’s **DevOps transformation**.
 
 ![DevOps methodology and process. What is ...](https://miro.medium.com/v2/resize%3Afit%3A543/1%2AZPZ-HnWTq-ofSVH9zZsMXg.png align="left")
-
-### What is DevOps?
-
-**DevOps** is a **culture and set of practices** that aim to unify software development (Dev) and IT operations (Ops). It emphasizes **automation, continuous integration, continuous delivery, testing, and monitoring** to enable faster and more reliable software releases.
-
-Rather than waiting for development to be fully completed before testing or deployment begins, DevOps encourages building, testing, and deploying code **continuously and iteratively—often on the same day**. This approach allows for:
-
-* **Faster releases**
-    
-* **Higher software quality**
-    
-* **Fewer defects**
-    
-* **Quicker feedback loops**
-    
-* **Improved collaboration between teams**
-    
-
-### Core Components of DevOps
-
-1. **Continuous Integration (CI)**  
-    Developers frequently merge their code changes into a shared repository. Automated builds and tests are triggered to detect issues early.
-    
-2. **Continuous Delivery (CD)**  
-    Every change that passes the automated tests is automatically prepared for release to staging or production.
-    
-3. **Continuous Deployment**  
-    Expands on CD by automatically deploying every validated change directly to production without human intervention.
-    
-4. **Continuous Testing**  
-    Automated tests run throughout the development lifecycle to ensure code quality and catch defects early.
-    
-5. **Continuous Monitoring**  
-    Applications and infrastructure are constantly monitored in real-time to ensure performance, availability, and reliability.
-    
-
-### DevOps Mindset
-
-DevOps is not just about tools—it's a **mindset of collaboration, automation, and accountability**. Teams focus on:
-
-* Breaking down silos between development and operations
-    
-* Using automation wherever possible
-    
-* Building resilient systems
-    
-* Responding to feedback quickly
-    
 
 ### 🔁 How ShopSmart Adopted DevOps
 
