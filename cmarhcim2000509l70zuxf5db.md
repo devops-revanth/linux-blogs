@@ -391,6 +391,54 @@ So began ShopSmart’s **DevOps transformation**.
 
 ![DevOps methodology and process. What is ...](https://miro.medium.com/v2/resize%3Afit%3A543/1%2AZPZ-HnWTq-ofSVH9zZsMXg.png align="left")
 
+### What is DevOps?
+
+**DevOps** is a **culture and set of practices** that aim to unify software development (Dev) and IT operations (Ops). It emphasizes **automation, continuous integration, continuous delivery, testing, and monitoring** to enable faster and more reliable software releases.
+
+Rather than waiting for development to be fully completed before testing or deployment begins, DevOps encourages building, testing, and deploying code **continuously and iteratively—often on the same day**. This approach allows for:
+
+* **Faster releases**
+    
+* **Higher software quality**
+    
+* **Fewer defects**
+    
+* **Quicker feedback loops**
+    
+* **Improved collaboration between teams**
+    
+
+### Core Components of DevOps
+
+1. **Continuous Integration (CI)**  
+    Developers frequently merge their code changes into a shared repository. Automated builds and tests are triggered to detect issues early.
+    
+2. **Continuous Delivery (CD)**  
+    Every change that passes the automated tests is automatically prepared for release to staging or production.
+    
+3. **Continuous Deployment**  
+    Expands on CD by automatically deploying every validated change directly to production without human intervention.
+    
+4. **Continuous Testing**  
+    Automated tests run throughout the development lifecycle to ensure code quality and catch defects early.
+    
+5. **Continuous Monitoring**  
+    Applications and infrastructure are constantly monitored in real-time to ensure performance, availability, and reliability.
+    
+
+### DevOps Mindset
+
+DevOps is not just about tools—it's a **mindset of collaboration, automation, and accountability**. Teams focus on:
+
+* Breaking down silos between development and operations
+    
+* Using automation wherever possible
+    
+* Building resilient systems
+    
+* Responding to feedback quickly
+    
+
 ### 🔁 How ShopSmart Adopted DevOps
 
 1. **CI/CD Pipelines Introduced**  
