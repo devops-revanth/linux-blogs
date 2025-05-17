@@ -52,8 +52,6 @@ They reply:
 
 **🧠 Goal:** Understand what the system must do before you build it.
 
----
-
 ### 2\. 🧠 Planning
 
 Now you ask:
@@ -73,8 +71,6 @@ You:
 
 **🧠 Goal:** Decide how to approach the project — team, tools, budget, and timeline.
 
----
-
 ### 3\. 📐 Design
 
 Now it’s blueprint time!
@@ -93,8 +89,6 @@ You:
 
 **🧠 Goal:** Translate requirements into technical design and system architecture.
 
----
-
 ### 4\. 👨‍💻 Implementation (Coding)
 
 Time to build!
@@ -109,8 +103,6 @@ Time to build!
     
 
 **🧠 Goal:** Turn the design into working software.
-
----
 
 ### 5\. 🚀 Deployment
 
@@ -127,8 +119,6 @@ ShopSmart is ready to go live!
 
 **🧠 Goal:** Make the app available to real users — reliably and at scale.
 
----
-
 ### 6\. 🧪 Testing
 
 Before and after deployment, QA takes over:
@@ -143,8 +133,6 @@ Before and after deployment, QA takes over:
     
 
 **🧠 Goal:** Ensure everything works as expected — no bugs, no surprises.
-
----
 
 ### 7\. 🔧 Maintenance
 
@@ -163,8 +151,6 @@ You continuously monitor logs, fix issues, and roll out updates.
 
 **🧠 Goal:** Keep the app running smoothly, updated, and secure — long-term.
 
----
-
 ## 🎯 Summary Table: SDLC for ShopSmart
 
 | **Phase** | **What You Did at ShopSmart** |
@@ -177,13 +163,9 @@ You continuously monitor logs, fix issues, and roll out updates.
 | Testing | Validated quality, performance, and security |
 | Maintenance | Handled bugs, updates, new features post-launch |
 
----
-
 ### 🧠 TL;DR:
 
 **SDLC** is the journey of turning a software idea into a working, evolving product — starting from requirements all the way to launch and continuous improvement.
-
----
 
 ## 🚦 How Do SDLC Models Differ?
 
@@ -240,8 +222,6 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
     Everything went live together. A single big bang release.
     
 
----
-
 ### ✅ Pros of Waterfall (What Went Well):
 
 * Clear documentation at every phase 📄
@@ -250,8 +230,6 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
     
 * Great for fixed-scope projects (like government or compliance-heavy systems)
     
-
----
 
 ### ❌ Cons of Waterfall (What Went Wrong at ShopSmart):
 
@@ -264,8 +242,6 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
 * 💭 Customers started giving feedback only after launch — by then, you had already spent months building the “wrong” things.
     
 
----
-
 ### 🧠 Why the Team Grew Tired of Waterfall
 
 * Developers felt disconnected — they were building features without knowing if users would even like them.
@@ -277,8 +253,6 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
 * It felt like: **“All or nothing. Hope it works!”** 😓
     
 
----
-
 ### 🎯 Summary: Waterfall for ShopSmart
 
 | **Aspect** | **How It Played Out** |
@@ -289,15 +263,9 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
 | Developer Morale | Low — no room for creativity or iteration |
 | Delivery Style | One big release after all phases were done |
 
----
-
 Waterfall gave structure, but it struggled with *change*, *feedback*, and *real-world surprises*. That’s when the team started thinking…
 
 > “There must be a better way to build ShopSmart — something more **adaptive** and **collaborative**.”
-
----
-
-Awesome! Let’s continue the **ShopSmart SDLC journey**, this time showing how the team evolved from the Waterfall frustrations and adopted **Agile**. We’ll keep the same structure: storytelling, phase-wise breakdown, pros, cons, and a summary.
 
 ---
 
@@ -369,8 +337,6 @@ They switched gears and embraced **Agile development**. Instead of building the 
 * 🤝 Developers, testers, and designers worked together like a squad.
     
 
----
-
 ### ❌ Cons of Agile (Challenges Faced):
 
 * 📅 Sprint planning required discipline — sometimes features took longer than expected.
@@ -379,8 +345,6 @@ They switched gears and embraced **Agile development**. Instead of building the 
     
 * ⚖️ It was hard to predict final delivery date — since scope evolved over time.
     
-
----
 
 ### 🧠 Why the Team Loved Agile
 
@@ -395,8 +359,6 @@ They switched gears and embraced **Agile development**. Instead of building the 
 
 Agile brought **energy**, **collaboration**, and **momentum** to ShopSmart’s journey.
 
----
-
 ### 🎯 Summary: Agile for ShopSmart
 
 | **Aspect** | **How It Played Out** |
@@ -407,17 +369,13 @@ Agile brought **energy**, **collaboration**, and **momentum** to ShopSmart’s j
 | Developer Morale | High — team worked closely and iteratively |
 | Delivery Style | Incremental — working features released often |
 
----
-
 The team started seeing results much faster. ShopSmart was growing steadily — but now they faced **new challenges**…
 
 > “We can build fast — but deployment is slow. Ops teams are overloaded. Bugs pop up in production. What if we automate this?”
 
 That’s when **DevOps** came into the picture.
 
-Awesome! Let’s continue the **ShopSmart journey**, where the team evolves from Agile to **DevOps** — because fast development alone wasn’t enough. Deployment was still painful, and collaboration between devs and ops needed help.
-
----
+Let’s continue the **ShopSmart journey**, where the team evolves from Agile to **DevOps** — because fast development alone wasn’t enough. Deployment was still painful, and collaboration between devs and ops needed help.
 
 ## ⚙️ DevOps – The Bridge Between Dev & Ops
 
@@ -470,8 +428,6 @@ So began ShopSmart’s **DevOps transformation**.
     * Logs, metrics, and traces helped diagnose issues faster.
         
 
----
-
 ### ✅ Pros of DevOps (What Worked Wonderfully at ShopSmart):
 
 * 🚀 Faster deployments — from “code to production” in hours, not weeks.
@@ -483,8 +439,6 @@ So began ShopSmart’s **DevOps transformation**.
 * 📈 Scalable infrastructure — ShopSmart stayed stable even during high traffic.
     
 
----
-
 ### ❌ Cons of DevOps (Challenges Faced):
 
 * ⚙️ Initial setup was complex — CI/CD pipelines and Kubernetes needed expertise.
@@ -493,8 +447,6 @@ So began ShopSmart’s **DevOps transformation**.
     
 * 📚 Documentation became critical — automation required clear configs.
     
-
----
 
 ### 🧠 Why the Team Embraced DevOps
 
@@ -509,8 +461,6 @@ So began ShopSmart’s **DevOps transformation**.
 
 DevOps turned ShopSmart into a well-oiled machine — code flowed from keyboard to customer smoothly.
 
----
-
 ### 🎯 Summary: DevOps for ShopSmart
 
 | **Aspect** | **How It Played Out** |
@@ -520,8 +470,6 @@ DevOps turned ShopSmart into a well-oiled machine — code flowed from keyboard 
 | Time to Feedback | Instant — with automation and monitoring |
 | Developer Morale | Very high — fast and reliable releases |
 | Delivery Style | Continuous — frequent, small, and stable releases |
-
----
 
 But just as the team was celebrating their DevOps success, another realization hit:
 
@@ -591,8 +539,6 @@ So they embraced **DevSecOps** — weaving security into every step of their pip
     They used tools like **Falco** and **Wazuh** to detect intrusions and anomalies in real time.
     
 
----
-
 ### ✅ Pros of DevSecOps (What Went Right for ShopSmart):
 
 * 🔐 Security wasn’t a last-minute patch — it was built-in.
@@ -604,8 +550,6 @@ So they embraced **DevSecOps** — weaving security into every step of their pip
 * 🚫 Fewer production incidents caused by overlooked vulnerabilities.
     
 
----
-
 ### ❌ Cons of DevSecOps (Challenges Faced):
 
 * ⏱️ Initial velocity slowed slightly — security checks added time to the pipeline.
@@ -614,8 +558,6 @@ So they embraced **DevSecOps** — weaving security into every step of their pip
     
 * 🔄 Keeping up with evolving threats required constant updates.
     
-
----
 
 ### 🧠 Why the Team Committed to DevSecOps
 
@@ -630,8 +572,6 @@ So they embraced **DevSecOps** — weaving security into every step of their pip
 
 DevSecOps made ShopSmart a **resilient, secure, and modern** application.
 
----
-
 ### 🎯 Summary: DevSecOps for ShopSmart
 
 | **Aspect** | **How It Played Out** |
@@ -641,8 +581,6 @@ DevSecOps made ShopSmart a **resilient, secure, and modern** application.
 | Secure Code Practices | Secrets management, package auditing, container hardening |
 | Team Culture | Security was a shared responsibility across roles |
 | Delivery Style | Continuous + Secure — with confidence |
-
----
 
 And with that, the ShopSmart journey through SDLC models comes full circle:
 
@@ -659,8 +597,6 @@ And with that, the ShopSmart journey through SDLC models comes full circle:
 
 Your ShopSmart app is now built fast, deployed continuously, and secure thanks to **DevSecOps**.  
 But with millions of users shopping daily, your operations team faces a mountain of alerts, logs, and issues to manage — it’s overwhelming!
-
----
 
 ### 🤖 **Enter AIOps — Artificial Intelligence for IT Operations**
 
@@ -679,8 +615,6 @@ Imagine this:
 * Some issues get fixed **automatically**, like restarting a service or scaling up servers when traffic spikes.
     
 
----
-
 ### 🧠 **How Does AIOps Help ShopSmart?**
 
 * Reduces noise from constant alerts by **filtering real problems**.
@@ -692,15 +626,11 @@ Imagine this:
 * Helps optimize resources, saving money on unnecessary servers.
     
 
----
-
 ### 🔄 **The SDLC and AIOps Together**
 
 AIOps doesn’t replace DevSecOps — it **builds on it** by making the operations smarter and more proactive.
 
 Think of it as adding a **super-smart assistant** who watches over ShopSmart 24/7, learns from past issues, and helps your team keep the app running smoothly without burnout.
-
----
 
 ### 🧭 **Summary**
 
