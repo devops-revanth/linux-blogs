@@ -5,6 +5,8 @@ seoDescription: "Explore Software Development Life Cycle evolution from Waterfal
 datePublished: Sat May 17 2025 00:19:17 GMT+0000 (Coordinated Universal Time)
 cuid: cmarhcim2000509l70zuxf5db
 slug: the-story-of-sdlc-from-waterfall-to-devsecops
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1747517472238/85ca5bd8-45a3-483a-8fe7-61e2562234fe.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1747517488389/b69e65c6-cf95-41d2-b8cb-3fbfa171296e.png
 
 ---
 
