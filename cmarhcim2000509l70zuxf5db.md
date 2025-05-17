@@ -152,6 +152,8 @@ Imagine you’re building an **online shopping platform** called **ShopSmart**. 
 
 ### 🏗️ **Waterfall Era (1970s–1990s)**
 
+![What is the Waterfall software model ...](https://cdn.bap-software.net/2023/09/waterfall1.jpg align="left")
+
 > You gather all requirements from the business team in one big meeting: product catalog, cart, checkout, payment gateway.  
 > Then you move to design. You draw diagrams and write documents. No code yet.  
 > Then months later, you start coding. Then you test. Then you deploy.
@@ -163,12 +165,18 @@ Imagine you’re building an **online shopping platform** called **ShopSmart**. 
 
 ### 🔄 **Agile Era (2001–2010s)**
 
+![software development projects ...](https://soldevelo.com/wp-content/uploads/2020/12/Agile-software-dev-1.jpeg align="left")
+
 > You now break the work into **sprints**.  
 > First sprint: create product listing.  
 > Second sprint: build the cart.  
 > After every sprint, you **show the feature to the team and stakeholders**, get feedback, and adjust as needed.
 
-🕒 You release small updates every 2–3 weeks.  
+🕒 You release small updates every 2–3 weeks.
+
+![Agile Methodology in Software ...](https://www.credencys.com/wp-content/uploads/2023/02/Agile-Methodologyin-Software-Development.png align="left")
+
+  
 🧑‍💻 Customers are involved early — they help shape the product.
 
 📦 Result: In a few months, users are already shopping. You adapt based on real feedback.
@@ -176,6 +184,8 @@ Imagine you’re building an **online shopping platform** called **ShopSmart**. 
 🧠 **Lesson**: Agile is like renovating one room at a time, showing the homeowner, and adjusting as you go.
 
 ### ⚙️ **DevOps Era (2010s)**
+
+![DevOps methodology and process. What is ...](https://miro.medium.com/v2/resize%3Afit%3A543/1%2AZPZ-HnWTq-ofSVH9zZsMXg.png align="left")
 
 > You’ve now got Agile working well. But deploying features to production is painful — takes hours, things break, and Dev and Ops blame each other.
 
@@ -194,6 +204,8 @@ Bugs are caught early. Teams collaborate better.
 🧠 **Lesson**: DevOps is like turning your project into a factory with smooth conveyor belts and quality checks at every step.
 
 ### 🔐 **DevSecOps Era (2015–Present)**
+
+![DevSecOps: Rapid & Secure Delivery](https://www.tredence.com/uploads/img/blog-img-1647087012.png align="left")
 
 > Everything is fast now — but wait. A security audit reveals **vulnerabilities**:
 
@@ -236,6 +248,8 @@ But with millions of users shopping daily, your operations team faces a mountain
 ---
 
 ### 🤖 **Enter AIOps — Artificial Intelligence for IT Operations**
+
+![Software Development ...](https://www.devprojournal.com/wp-content/uploads/2024/11/AIOps-software-development-696x392.jpg align="left")
 
 AIOps uses **Artificial Intelligence and Machine Learning** to help automate and improve IT operations.
 
