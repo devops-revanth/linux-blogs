@@ -12,6 +12,8 @@ slug: the-story-of-sdlc-from-waterfall-to-devsecops
 
 Every software product—whether it’s a mobile app, web platform, or enterprise tool—follows a process from idea to release. That process is called the **Software Development Life Cycle (SDLC)**.
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747516738486/6e8e47bb-bdd4-4e7c-8ebd-7e9353c5abfd.png align="center")
+
 But how teams plan, build, test, and deploy software has changed drastically over the decades.
 
 From the rigid, step-by-step **Waterfall** approach to the flexible and collaborative models of **Agile**, **DevOps**, and now **DevSecOps**, each evolution has tried to solve one simple problem:  
@@ -192,6 +194,8 @@ Imagine you're part of a development team hired to build ***ShopSmart***, an onl
 * Track their orders
     
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747516820597/e2d3151d-8e31-45b5-9f38-bff9974541e7.png align="center")
+
 Let’s see how ***ShopSmart*** would be developed under each SDLC model:
 
 ## 🏔️ Waterfall Model – The Linear Planner
@@ -200,7 +204,7 @@ Let’s rewind to **ShopSmart’s early days**. Back then, your team decided to 
 
 > 📌 **Approach**: Plan everything first, build later. No changes mid-way.
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747509446170/224215c7-d75b-4e22-8743-f65746300ddb.png align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747516924850/8b1b107d-b277-49ee-af19-3c4184defa7b.png align="center")
 
 ### 🚧 How ShopSmart Was Built Using Waterfall:
 
@@ -278,7 +282,7 @@ They switched gears and embraced **Agile development**. Instead of building the 
 
 After each sprint, the client and testers review what’s built, give feedback, and help prioritize what’s next.
 
-![Agile Methodology in Software ...](https://www.credencys.com/wp-content/uploads/2023/02/Agile-Methodologyin-Software-Development.png align="left")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747517007519/f29734ad-1f9d-4be0-82c9-c0e6f020e70b.png align="center")
 
 ### ✅ Pros of Agile (What Went Great for ShopSmart):
 
@@ -347,6 +351,8 @@ So began ShopSmart’s **DevOps transformation**.
 * Infrastructure is treated as code using tools like Terraform or Ansible.
     
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747517072384/8680b23f-1cdb-4b9c-a348-9ff7233d45b3.png align="center")
+
 ### ✅ Pros of DevOps (What Worked Wonderfully at ShopSmart):
 
 * 🚀 Faster deployments — from “code to production” in hours, not weeks.
@@ -413,6 +419,8 @@ So they embraced **DevSecOps** — weaving security into every step of their pip
     
 * Secrets and credentials are stored securely using tools like HashiCorp Vault or AWS Secrets Manager.
     
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1747517230286/bf32dc49-03ef-47c1-9e7d-8c9302655578.png align="center")
 
 ### ✅ Pros of DevSecOps (What Went Right for ShopSmart):
 
