@@ -78,6 +78,39 @@ Now it’s time to go deeper — **manipulate files and directories**, **view co
 * Execute the script to replicate your actions in one go.
     
 
+## 🎁 **Bonus Task – Handling Files with Spaces in Names**
+
+Let’s make things a bit more interesting.
+
+You’ll often come across (or accidentally create) files with spaces in their names. While this is possible in Linux, it's not ideal — and managing them from the command line can get tricky.
+
+### 🔧 Task:
+
+1. Create a few files with spaces in their names like:
+    
+    * `project report.txt`
+        
+    * `daily notes.txt`
+        
+    * `linux guide.doc`
+        
+2. Try listing and opening these files — notice how you have to handle the spaces.
+    
+3. Now, **rename each file** to remove the spaces or replace them with underscores or hyphens, like:
+    
+    * `project_report.txt`
+        
+    * `daily-notes.txt`
+        
+4. Try doing this **manually** at first, then explore how to automate this renaming using:
+    
+    * `mv` in a loop
+        
+    * `rename` command *(if available)*
+        
+
+💡 *This exercise will improve your handling of special characters and teach you good file-naming practices for scripting and automation.*
+
 ## 📌 Commands You Will Use (Not Explained – Find Them Yourself)
 
 `ls`, `cd`, `pwd`, `mv`, `rm`, `rmdir`, `cat`, `echo`, `touch`, `cp`, `vi`, `wc`
